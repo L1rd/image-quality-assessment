@@ -1,4 +1,4 @@
-import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter , Routes, Route, Navigate } from 'react-router-dom'
 
 import { LoginPage, MainApp, SignupPage, WelcomePage } from './pages'
 
@@ -14,7 +14,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route index element={<WelcomePage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -28,7 +28,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
