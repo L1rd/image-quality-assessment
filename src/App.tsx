@@ -1,6 +1,6 @@
-import { HashRouter , Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter , Routes, Route } from 'react-router-dom'
 
-import { LoginPage, MainApp, SignupPage, WelcomePage } from './pages'
+import { LoginPage, MainApp, SignupPage } from './pages'
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   // const currentUser = sessionStorage.getItem('currentUser');
