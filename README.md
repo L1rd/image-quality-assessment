@@ -1,54 +1,19 @@
-# React + TypeScript + Vite
+**Назва Проєкту:** Програмна система оцінювання якості графічних зображень.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Опис Проєкту:**
+Ця система є комплексним рішенням для порівняльного аналізу та оцінки якості графічних зображень. Вона інтегрує широкий спектр як **об'єктивних метрик** (MSE, PSNR, SSIM, FSIM), так і **суб'єктивних методів** оцінки (Кендалла, Лайкерта, MOS). Особливістю системи є застосування **адаптивного методу**, який динамічно коригує оцінку залежно від вмісту зображень, а також **гібридного підходу**, що поєднує об'єктивні показники з суб'єктивним сприйняттям користувачів. Всі результати порівнянь та обчислень зберігаються в історії для подальшого аналізу. Архітектура системи є відкритою та гнучкою, що передбачає можливості для майбутніх інтеграцій та розширень, зокрема з використанням штучного інтелекту.
 
-Currently, two official plugins are available:
+**Переваги Проєкту:**
+1.  **Комплексність оцінки:** Поєднання об'єктивних та суб'єктивних метрик забезпечує всебічну та достовірну оцінку якості зображень, що важливо для узгодження з візуальним сприйняттям людини.
+2.  **Адаптивність та Гібридний підхід:** Адаптивний метод дозволяє точніше оцінювати зображення з різними видами спотворень, а гібридний підхід підвищує надійність результатів, враховуючи обидва типи оцінок.
+3.  **Зберігання Історії:** Можливість зберігати та переглядати попередні обчислення спрощує відстеження змін якості, порівняння різних версій зображень та проведення досліджень.
+4.  **Відкрита Архітектура:** Гнучкість системи дозволяє майбутні інтеграції з іншими програмними рішеннями та розширення функціоналу, зокрема за рахунок впровадження методів штучного інтелекту для автоматизації та підвищення точності аналізу.
+5.  **Зручний Інструментарій:** Наявність різноманітних метрик в одній системі спрощує процес оцінки для користувача, усуваючи необхідність використання кількох окремих інструментів.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+**Сценарії Використання:**
+1.  **Дослідження та Розробка в Галузі Обробки Зображень:** Науковці та інженери можуть використовувати систему для тестування нових алгоритмів стиснення, шумозаглушення, відновлення або покращення зображень, порівнюючи ефективність різних підходів.
+2.  **Контроль Якості в Медіаіндустрії:** Дизайнери, фотографи та відеоредактори можуть забезпечувати високу якість графічного контенту, перевіряючи зображення після обробки або конвертації.
+3.  **Медична Візуалізація:** Оцінка якості медичних зображень (рентгенівських знімків, УЗД, МРТ) для забезпечення точної діагностики та аналізу.
+4.  **Комп'ютерний Зір та Машинне Навчання:** Розробники систем комп'ютерного зору можуть використовувати систему для оцінки якості вхідних даних для навчання моделей або для верифікації вихідних зображень згенерованих нейронними мережами.
+5.  **Веб-розробка та Оптимізація Зображень:** Оптимізація зображень для веб-сайтів (зменшення розміру файлу при збереженні прийнятної якості) з метою підвищення швидкодії завантаження сторінок.
+6.  **Судова Експертиза:** Аналіз зображень на наявність спотворень або модифікацій, що можуть бути важливими для розслідувань.
