@@ -1,6 +1,7 @@
-import { HashRouter , Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
-import { LoginPage, MainApp, SignupPage } from './pages'
+import { LoginPage, SignupPage, SubjectivePage, ObjectivePage, EvaluationPage, HomePage, HistoryPage } from './pages'
+import { Header } from './components';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   // const currentUser = sessionStorage.getItem('currentUser');
@@ -14,21 +15,27 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/image-quality-assessment">
+      <Header />
       <Routes>
         {/* <Route index element={<WelcomePage />} /> */}
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
         <Route
         index
           element={
             <ProtectedRoute>
-              <MainApp />
+              <HomePage />
             </ProtectedRoute>
           }
         />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/subjective-assessment" element={<SubjectivePage />} />       
+        <Route path="/objective-assessment" element={<ObjectivePage />} />       
+        <Route path="/evaluation" element={<EvaluationPage />} />     
+        <Route path="/history" element={<HistoryPage />} />      
+
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
